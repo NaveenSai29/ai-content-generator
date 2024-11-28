@@ -47,9 +47,9 @@ function FormSection({ selectedTemplate,userFormInput,loading }: PROPS) {
                             <>
                                 <Textarea name={item.name} required={item?.required}
                                 rows={5}
-                                maxLength={10000}
+                                maxLength={20000}
                                 onChange={handleInputChange} /> 
-                                <label className='text-xs text-gray-400'>Note:Max 10000 Words</label>
+                                <label className='text-xs text-gray-400'>Note:Max 20000 Words</label>
                                 
                                 </>    : null
                         }
