@@ -33,7 +33,7 @@ function FormSection({ selectedTemplate,userFormInput,loading }: PROPS) {
             <Image src={selectedTemplate?.icon}
                 alt='icon' width={70} height={70} />
             <h2 className='font-bold text-2xl mb-2 mt-4 text-primary'>{selectedTemplate?.name}</h2>
-            <p className='text-gray-500 text-sm'>{selectedTemplate?.desc}</p>
+            <p className='text-green-500 text-sm'>{selectedTemplate?.desc}</p>
 
             <form className='mt-6' onSubmit={onSubmit}>
                 {selectedTemplate?.form?.map((item, index) => (
@@ -47,9 +47,9 @@ function FormSection({ selectedTemplate,userFormInput,loading }: PROPS) {
                             <>
                                 <Textarea name={item.name} required={item?.required}
                                 rows={5}
-                                maxLength={2000}
+                                maxLength={10000}
                                 onChange={handleInputChange} /> 
-                                <label className='text-xs text-gray-400'>Note:Max 2000 Words</label>
+                                <label className='text-xs text-gray-400'>Note:Max 10000 Words</label>
                                 
                                 </>    : null
                         }
